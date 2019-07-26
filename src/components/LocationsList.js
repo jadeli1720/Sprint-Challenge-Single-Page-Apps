@@ -30,7 +30,6 @@ export default function LocationsList() {
             />
         ))}
 
-        {console.log('Location',data)}
     </section>
     
 }
