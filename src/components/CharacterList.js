@@ -36,7 +36,7 @@ export default function CharacterList() {
           
           />
         )) }
-      {console.log('character',data)}
+      {/* {console.log('character',data)} */}
     </section>
 
 }
