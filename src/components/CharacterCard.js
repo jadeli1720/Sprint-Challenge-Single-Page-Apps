@@ -8,16 +8,20 @@ export default function CharacterCard (props) {
     <Card.Content>
       <Card.Header>{props.name}</Card.Header>
       <Card.Meta>
-        <span className='date'>Joined in 2015</span>
+        <span className='date'>{props.species} {props.status}</span>
       </Card.Meta>
       <Card.Description>
-        Matthew is a musician living in Nashville.
+          Location: {props.location}
+      </Card.Description>
+      <Card.Description>
+          Origin: {props.origin}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
       <a>
         <Icon name='user' />
-        22 Friends
+        {/* {props.episode} */}
+        Episode
       </a>
     </Card.Content>
   </Card>

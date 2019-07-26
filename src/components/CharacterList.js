@@ -31,7 +31,8 @@ export default function CharacterList() {
           img={data.image}
           name={data.name}
           species={data.species} status={data.status}
-          // origin={[data.origin]}
+          location={data.location.name}
+          origin={data.origin.name}
           
           />
         )) }
