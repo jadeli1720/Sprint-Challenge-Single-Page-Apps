@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import LocationCard from './LocationCard';
+import EpisodeCard from './EpisodeCard';
 
-//https://rickandmortyapi.com/api/locations/
+//api if there are too many calls: https://rick-and-morty-learning-api.herokuapp.com/api/
+
 export default function LocationsList() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
         Axios
-            .get(`https://rickandmortyapi.com/api/location/`)
+            .get(`https://rickandmortyapi.com/api/episode/`)
             .then(res =>{
                 setData(res.data.results)
                 console.log('response',res)
@@ -21,15 +22,14 @@ export default function LocationsList() {
     return <section className='character-list grid-view'>
         {/* <LocationCard/> */}
         {data.map((data, id) => (
-            <LocationCard
+            <EpisodeCard
             key={id}
             name={data.name}
-            type={data.type}
-            dimension={data.dimension}
-            residents={data.residents.length}
+            episode={data.episode}
+            characters={data.characters.length}
+            date={data.air_date}
             />
         ))}
-
     </section>
     
 }
